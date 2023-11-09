@@ -5,8 +5,8 @@ HAPI with Spring Boot and Swagger.
 
 The problem with integration is that Spring Boot and Swagger 
 uses Jackson for serialization and inspection.
-Because of the complexities of the HAPI Datamodel, 
-Jackson is unable to inspect or serialzie/deserialize.
+And because of the complexities of the HAPI Datamodel, 
+Jackson is unable to inspect or serialize/deserialize.
 
 To address these shortcomings, do the following:
 
