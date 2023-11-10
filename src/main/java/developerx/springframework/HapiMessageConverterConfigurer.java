@@ -18,4 +18,3 @@ public class HapiMessageConverterConfigurer implements WebMvcConfigurer {
         messageConverters.add(0, new HapiHttpMessageConverter(this.fhirContext));
     }
 }
-
