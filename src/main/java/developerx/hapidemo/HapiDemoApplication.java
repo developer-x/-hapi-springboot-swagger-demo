@@ -10,23 +10,23 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 public class HapiDemoApplication {
 
-	@Bean
-	public FhirContext fhirContext() {
-		return FhirContext.forR5();
-	}
+    @Bean
+    public FhirContext fhirContext() {
+        return FhirContext.forR5();
+    }
 
-	@Bean
-	public HapiMessageConverterConfigurer hapiMessageConverterConfigurer(FhirContext fhirContext) {
-		return new HapiMessageConverterConfigurer(fhirContext);
-	}
+    @Bean
+    public HapiMessageConverterConfigurer hapiMessageConverterConfigurer(FhirContext fhirContext) {
+        return new HapiMessageConverterConfigurer(fhirContext);
+    }
 
-	@Bean
-	public HapiSwaggerSupport hapiModelConverter() {
-		return new HapiSwaggerSupport();
-	}
+    @Bean
+    public HapiSwaggerSupport hapiModelConverter() {
+        return new HapiSwaggerSupport();
+    }
 
-	public static void main(String[] args) {
-		SpringApplication.run(HapiDemoApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(HapiDemoApplication.class, args);
+    }
 
 }
