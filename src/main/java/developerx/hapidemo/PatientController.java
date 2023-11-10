@@ -40,7 +40,7 @@ public class PatientController {
     }
 
     @GetMapping
-    public @Schema(implementation = Bundle.class) Bundle getPatients() {
+    public Bundle getPatients() {
         BundleBuilder builder = new BundleBuilder(fhirContext);
         IBase entry = builder.addEntry();
 

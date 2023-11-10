@@ -41,7 +41,7 @@ public class ConditionController {
     }
 
     @GetMapping
-    public @Schema(implementation = Bundle.class) Bundle getConditions() {
+    public Bundle getConditions() {
         BundleBuilder builder = new BundleBuilder(fhirContext);
         IBase entry = builder.addEntry();
 
