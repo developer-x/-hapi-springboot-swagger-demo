@@ -75,11 +75,10 @@ public class PatientController {
         HumanName name = new HumanName()
                 .setGiven(Collections.singletonList(new StringType("John")))
                 .setFamily("Doe");
-        Patient patient = new Patient()
+        return new Patient()
                 .setIdentifier(Collections.singletonList(identifier))
                 .setAddress(Collections.singletonList(address))
                 .setName(Collections.singletonList(name));
-        return patient;
     }
 
 }
