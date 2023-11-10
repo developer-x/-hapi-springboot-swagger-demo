@@ -1,7 +1,9 @@
 # HAPI support for Spring Boot and Swagger
 
 This Project demonstrates how to integrate
-HAPI with Spring Boot and Swagger.
+[HAPI](https://github.com/hapifhir/hapi-fhir) with 
+[Spring Boot](https://spring.io/projects/spring-boot) and 
+[Swagger](https://swagger.io/tools/open-source/open-source-integrations/).
 
 The problem with integration is that Spring Boot and Swagger 
 uses Jackson for serialization and inspection.
