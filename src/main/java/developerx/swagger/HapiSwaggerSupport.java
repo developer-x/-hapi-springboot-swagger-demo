@@ -9,9 +9,11 @@ import io.swagger.v3.core.converter.ModelConverterContext;
 import io.swagger.v3.core.util.Json;
 import io.swagger.v3.oas.models.media.ObjectSchema;
 import io.swagger.v3.oas.models.media.Schema;
+import io.swagger.v3.oas.models.media.StringSchema;
 import org.hl7.fhir.r5.model.Extension;
 import org.hl7.fhir.r5.model.IdType;
 import org.hl7.fhir.r5.model.Meta;
+import org.hl7.fhir.r5.model.StringType;
 
 import java.lang.reflect.Method;
 import java.util.Iterator;
@@ -69,12 +71,17 @@ public class HapiSwaggerSupport implements ModelConverter {
                                     .getSimpleName()
                     );
         }
+
+        if (isStringType(annotatedType)) {
+            return new StringSchema();
+        }
+
         return (chain.hasNext())
                 ? chain.next().resolve(annotatedType, modelConverterContext, chain)
                 : null;
     }
 
-    private static boolean isTruncated(AnnotatedType annotatedType) {
+    private boolean isTruncated(AnnotatedType annotatedType) {
         return annotatedType.getType() instanceof SimpleType && (
                 Meta.class.isAssignableFrom(((SimpleType) annotatedType.getType()).getRawClass()) ||
                 IdType.class.isAssignableFrom(((SimpleType) annotatedType.getType()).getRawClass()) ||
@@ -82,4 +89,8 @@ public class HapiSwaggerSupport implements ModelConverter {
             );
     }
 
+    private boolean isStringType(AnnotatedType annotatedType)  {
+        return annotatedType.getType() instanceof SimpleType &&
+                StringType.class.isAssignableFrom(((SimpleType) annotatedType.getType()).getRawClass());
+    }
 }

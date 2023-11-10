@@ -19,3 +19,7 @@ and truncate less relevant fields
 * Since HAPI's models are complex, provide [sensible
 Swagger default values](src/main/java/developerx/swagger/PatientDocumentation.java)
 
+## Running the Demo
+From the command line, issue `./gradlew bootRun`.
+Once the application is running, open your browser to
+http://localhost:8080/swagger-ui.html

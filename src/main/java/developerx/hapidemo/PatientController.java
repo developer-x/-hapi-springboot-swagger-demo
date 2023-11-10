@@ -15,10 +15,10 @@ import java.util.Collections;
 
 @RestController
 @RequestMapping(path = "patients")
-public class PatientRestController {
+public class PatientController {
     private final FhirContext fhirContext;
 
-    public PatientRestController(FhirContext fhirContext) {
+    public PatientController(FhirContext fhirContext) {
         this.fhirContext = fhirContext;
     }
 

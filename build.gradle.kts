@@ -19,7 +19,6 @@ repositories {
 dependencies {
     implementation("ca.uhn.hapi.fhir:hapi-fhir-base:6.8.3")
     implementation("ca.uhn.hapi.fhir:hapi-fhir-structures-r5:6.8.3")
-    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
