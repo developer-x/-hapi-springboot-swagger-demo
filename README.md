@@ -20,7 +20,8 @@ to direct swagger to only inspect non-private fields
 and truncate less relevant fields
 * Since HAPI's models are complex, provide [sensible
 Swagger default values](src/main/java/developerx/swagger/PatientDocumentation.java)
-* Collection of HAPI Resources should use the [Bundle Resource](src/main/java/developerx/hapidemo/ConditionController.java#L45)
+
+**Note:** Collection of HAPI Resources should use the [Bundle Resource](src/main/java/developerx/hapidemo/ConditionController.java#L45) rather than return a Collection type.
 
 ## Running the Demo
 From the command line, issue `./gradlew bootRun`.
