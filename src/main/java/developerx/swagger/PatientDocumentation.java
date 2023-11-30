@@ -2,10 +2,6 @@ package developerx.swagger;
 
 public class PatientDocumentation {
 
-    public static class PatientSchema {
-
-    }
-
     public static final String DESCRIPTION =
             "Demographics and other administrative information about an individual or " +
                     "animal receiving care or other health-related services.";

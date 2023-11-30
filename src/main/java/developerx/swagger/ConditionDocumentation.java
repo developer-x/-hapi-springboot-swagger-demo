@@ -2,10 +2,6 @@ package developerx.swagger;
 
 public class ConditionDocumentation {
 
-    public static class PatientSchema {
-
-    }
-
     public static final String DESCRIPTION =
             "A clinical condition, problem, diagnosis, or other event, situation, issue, or " +
                     "clinical concept that has risen to a level of concern.";
